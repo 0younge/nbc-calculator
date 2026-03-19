@@ -51,6 +51,24 @@ public class Main {
 
         }
 
+        // 사칙연산 기호 입력
+        while (true) {
+            System.out.print("사칙연산 기호를 입력하세요: ");
+            symbol = sc.nextLine();
+
+            if (symbol.equals("+") || symbol.equals("-") || symbol.equals("*")) {
+                break;
+            } else if (secondNum == 0 && symbol.equals("/")) {
+                System.out.println("0으로 나눌 수 없습니다 다른 기호를 입력하세요.");
+                continue;
+            } else if (symbol.equals("/")) {
+                break;
+            } else {
+                System.out.println("정해진 기호만 입력가능합니다 다시 입력하세요.");
+                continue;
+            }
+        }
+
 
 
 
