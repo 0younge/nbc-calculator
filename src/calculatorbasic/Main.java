@@ -35,6 +35,22 @@ public class Main {
 
         }
 
+        // 두 번째 정수 입력
+        while (true) {
+
+            System.out.print("두번째 정수를 입력하세요: ");
+            try {
+                secondNum = sc.nextInt();
+                sc.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("정수를 입력하세요.");
+                sc.nextLine();
+                continue;
+            }
+
+        }
+
 
 
 
