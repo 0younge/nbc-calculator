@@ -74,7 +74,7 @@ public class App {
             }
 
             // 계산 부분
-            calculator.calculate(firstNum, secondNum, symbol);
+            result = calculator.calculate(firstNum, secondNum, symbol);
 
             // 출력 부분
             System.out.println("계산 결과는: " + result + "입니다.");
