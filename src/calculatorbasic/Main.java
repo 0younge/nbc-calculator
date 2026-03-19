@@ -69,6 +69,27 @@ public class Main {
             }
         }
 
+        // 계산 부분
+        switch (symbol) {
+            case "+":
+                result = firstNum + secondNum;
+                break;
+            case "-":
+                result = firstNum - secondNum;
+                break;
+            case "*":
+                result = firstNum * secondNum;
+                break;
+            case "/":
+                result = firstNum / secondNum;
+                break;
+            default:
+                System.out.println("예상하지 못한 오류가 발생했습니다.");
+        }
+
+        // 출력 부분
+        System.out.println("계산 결과는: " + result + "입니다.");
+
 
 
 
