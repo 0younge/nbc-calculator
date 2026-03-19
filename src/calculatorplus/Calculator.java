@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Calculator {
 
     // 속성
-    ArrayList<Integer> resultList = new ArrayList<>();
+    private ArrayList<Integer> resultList = new ArrayList<>();
 
     // 생성자
 
@@ -29,4 +29,13 @@ public class Calculator {
         resultList.add(result);
         return result;
     }
+
+    public ArrayList<Integer> getResultList() {
+        return resultList;
+    }
+
+    public void setResultList(ArrayList<Integer> resultList) {
+        this.resultList = resultList;
+    }
+
 }
