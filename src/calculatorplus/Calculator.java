@@ -38,4 +38,8 @@ public class Calculator {
         this.resultList = resultList;
     }
 
+    public void removeOldResultList() {
+        resultList.remove(0);
+    }
+
 }
