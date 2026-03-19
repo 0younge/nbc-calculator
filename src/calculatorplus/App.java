@@ -86,6 +86,9 @@ public class App {
             if (keepCalculator.equals("exit")) {
                 keep = false;
             }
+
+            // 게터 활용
+            System.out.println("현재까지 계산 결과: " + calculator.getResultList());
         }
 
     }
