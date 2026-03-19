@@ -9,8 +9,11 @@ public class App {
 
         System.out.println("=== 계산기 ===");
 
-        // 1. 스캐너 생성
+        // 스캐너 생성
         Scanner sc = new Scanner(System.in);
+
+        // 계산 클래스 객체화
+        Calculator calculator = new Calculator();
 
         int firstNum; // 첫 번째 값
         int secondNum; // 두 번째 값
@@ -71,22 +74,7 @@ public class App {
             }
 
             // 계산 부분
-            switch (symbol) {
-                case "+":
-                    result = firstNum + secondNum;
-                    break;
-                case "-":
-                    result = firstNum - secondNum;
-                    break;
-                case "*":
-                    result = firstNum * secondNum;
-                    break;
-                case "/":
-                    result = firstNum / secondNum;
-                    break;
-                default:
-                    System.out.println("예상하지 못한 오류가 발생했습니다.");
-            }
+            calculator.calculate(firstNum, secondNum, symbol);
 
             // 출력 부분
             System.out.println("계산 결과는: " + result + "입니다.");
