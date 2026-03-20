@@ -16,6 +16,20 @@ public enum OperatorType {
         this.calculate = calculate;
     }
 
+    public double calculate(double num1, double num2) {
+        return calculate.calculate(num1, num2);
+    }
+
+    public static OperatorType symbolType(String symbol) {
+        OperatorType[] arr = values();
+        for (int i = 0; i <  arr.length; i++) {
+            if (arr[i].symbol.equals(symbol)) {
+                return arr[i];
+            }
+        }
+        return null;
+    }
+
     @FunctionalInterface
     interface Calculator {
         double calculate(double num1, double num2);
