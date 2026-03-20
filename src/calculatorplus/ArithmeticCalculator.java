@@ -2,7 +2,7 @@ package calculatorplus;
 
 import java.util.ArrayList;
 
-public class Calculator {
+public class ArithmeticCalculator {
 
     // 속성
     private ArrayList<Integer> resultList = new ArrayList<>();
