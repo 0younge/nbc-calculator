@@ -7,11 +7,11 @@ public class CalculatorController {
     // 속성
     private Scanner scanner;
     private Repository repository;
-    Calculator calculator;
-    Parser parser;
+    private Calculator calculator;
+    private Parser parser;
 
     // 생성자
-    CalculatorController(Scanner scanner, Repository repository, Calculator calculator, Parser parser) {
+    public CalculatorController(Scanner scanner, Repository repository, Calculator calculator, Parser parser) {
         this.scanner = scanner;
         this.repository = repository;
         this.calculator = calculator;
@@ -39,23 +39,22 @@ public class CalculatorController {
         while (power) {
             String input;
             input = scanner.nextLine();
-            repository.addList(input);
 
             if (input.equals("=")) {
-                for (int i = 0; i < repository.getSize(); i++) {
-                    System.out.println(repository.getList(i));
-                }
+                double num1 = parser.changeType(repository.getList(0));
+                double num2 = parser.changeType(repository.getList(2));
+
+                double result = calculator.calculate(num1, repository.getList(1), num2);
+
+                System.out.println(num1 + " " + repository.getList(1) + " " + num2 + " = " + result);
                 break;
             }
 
+            repository.addList(input);
+
         }
 
-        double num1 = parser.changeType(repository.getList(0));
-        double num2 = parser.changeType(repository.getList(2));
 
-        double result = calculator.calculate(num1, repository.getList(1), num2);
-
-        System.out.println(num1 + " " + repository.getList(1) + " " + num2 + " = " + result);
 
     }
 
