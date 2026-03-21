@@ -11,6 +11,17 @@ public class Repository {
     // 생성자
 
     // 기능
+    public void addList(String input) {
+        inputList.add(input);
+    }
+
+    public String getList(int index) {
+        return inputList.get(index);
+    }
+
+    public int getSize() {
+        return inputList.size();
+    }
 
 
 }

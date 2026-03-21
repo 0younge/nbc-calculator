@@ -8,7 +8,13 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         Repository repository = new Repository();
-        InOutmanage inout = new InOutmanage(scanner, repository);
+        Calculator calculator = new Calculator();
+        Parser parser = new Parser();
+        CalculatorController controller = new CalculatorController(scanner, repository, calculator, parser);
+
+        controller.runProgram();
+
+
 
     }
 
