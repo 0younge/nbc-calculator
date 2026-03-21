@@ -7,10 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        Storage storage = new Storage();
-        InputOutputManage iomanage = new InputOutputManage(scanner, storage);
-
-        iomanage.startCalculator();
+        Repository repository = new Repository();
+        InOutmanage inout = new InOutmanage(scanner, repository);
 
     }
 
