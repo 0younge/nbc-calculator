@@ -30,7 +30,7 @@ public class CalculatorController {
         if (runWhether.equals("run")) {
             power = true;
 
-            System.out.println("숫자와 기호를 순서대로 입력하세요: ");
+            System.out.println("숫자와 기호를 순서대로 입력하세요");
             System.out.println("예시: 5 enter + enter 10 enter = enter");
             System.out.print("입력: ");
 
@@ -47,7 +47,19 @@ public class CalculatorController {
                 double result = calculator.calculate(num1, repository.getList(1), num2);
 
                 System.out.println(num1 + " " + repository.getList(1) + " " + num2 + " = " + result);
-                break;
+
+                System.out.print("계속 계산하시겠습니까?(yes,다른 입력시 종료):");
+                input = scanner.nextLine();
+                if (input.equals("yes")) {
+                    repository.clearList();
+                    System.out.println("숫자와 기호를 순서대로 입력하세요");
+                    System.out.println("예시: 5 enter + enter 10 enter = enter");
+                    System.out.print("입력: ");
+                    continue;
+                } else {
+                    break;
+                }
+
             }
 
             repository.addList(input);

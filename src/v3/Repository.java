@@ -23,5 +23,9 @@ public class Repository {
         return inputList.size();
     }
 
+    public void clearList() {
+        inputList.clear();
+    }
+
 
 }
