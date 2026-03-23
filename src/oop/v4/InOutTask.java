@@ -1,4 +1,4 @@
-package v4;
+package oop.v4;
 
 public interface InOutTask {
     void inOutValue();

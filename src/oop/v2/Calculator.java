@@ -1,6 +1,4 @@
-package v2;
-
-import java.util.Scanner;
+package oop.v2;
 
 public class Calculator {
 

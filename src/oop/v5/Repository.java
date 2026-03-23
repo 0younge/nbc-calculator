@@ -1,12 +1,14 @@
-package v3;
+package oop.v5;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Repository {
 
     // 속성
     private List<String> inputList = new ArrayList<>();
+    private List<Double> resultList = new ArrayList<>();
 
     // 생성자
 
@@ -15,17 +17,8 @@ public class Repository {
         inputList.add(input);
     }
 
-    public String getList(int index) {
-        return inputList.get(index);
+    public List<Double> getList() {
+        return Collections.unmodifiableList(resultList);
     }
-
-    public int getSize() {
-        return inputList.size();
-    }
-
-    public void clearList() {
-        inputList.clear();
-    }
-
 
 }

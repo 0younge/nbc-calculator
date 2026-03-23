@@ -1,4 +1,4 @@
-package v2;
+package oop.v2;
 
 import java.util.Scanner;
 
