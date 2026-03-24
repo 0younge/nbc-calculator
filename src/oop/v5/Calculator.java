@@ -1,22 +1,19 @@
 package oop.v5;
 
-import oop.v5.task.InputStore;
-import oop.v5.task.ResultPrinter;
+import oop.v5.task.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Calculator {
 
     // 속성
-    private IOHandler ioHandler;
-    private Repository repository;
-    private InputStore inputStore;
-    private ResultPrinter resultPrinter;
+    private Map<String, Task> taskMap;
+    private TaskResult taskResult = new TaskResult("guide");;
 
     // 생성자
-    public Calculator(IOHandler ioHandler, Repository repository, InputStore inputStore, ResultPrinter resultPrinter) {
-        this.ioHandler = ioHandler;
-        this.repository = repository;
-        this.inputStore = inputStore;
-        this.resultPrinter =  resultPrinter;
+    public Calculator(Map<String, Task> taskMap) {
+        this.taskMap = taskMap;
     }
 
     // 기능
@@ -24,9 +21,13 @@ public class Calculator {
         System.out.println("===== 계산기 =====");
 
         while (true) {
-            inputStore.execute();
 
-            resultPrinter.execute();
+            taskResult = taskMap.get(taskResult.getCommand()).execute();
+
+            if (taskResult.getCommand().equals("exit")) {
+                break;
+            }
+
         }
 
     }

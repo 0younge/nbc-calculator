@@ -10,7 +10,7 @@ public class IOHandler {
     // 생성자
 
     // 기능
-    public String ScanInput() {
+    public String scanInput() {
         return scanner.nextLine();
     }
 

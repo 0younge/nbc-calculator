@@ -17,17 +17,17 @@ public class InputStore implements Task{
 
     // 기능
     @Override
-    public void execute() {
-        System.out.println("계산할 수식을 입력하세요");
-        System.out.println("ex) 1 enter + enter + 3 enter = enter");
-        System.out.print("입력: ");
+    public TaskResult execute() {
 
-        while (true) {
-            String input = ioHandler.ScanInput();
+        String input = ioHandler.scanInput();
+        if (input.equals("=")) {
+            return new TaskResult("result");
+        }
+        else if (input.equals("exit")) {
+            return new TaskResult("exit");
+        } else {
             repository.addList(input);
-            if (input.equals("=")) {
-                break;
-            }
+            return new TaskResult("input");
         }
 
     }
