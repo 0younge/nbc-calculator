@@ -15,9 +15,10 @@ public class ResultPrinter implements Task{
     // 기능
     @Override
     public TaskResult execute() {
+
         // 계산 기능 들어올 부분
         System.out.println("결과 목록: " + repository.getList());
-        return new TaskResult("guide");
+        return new TaskResult(TaskCommandType.GUIDE.getTaskResult());
 
     }
 }

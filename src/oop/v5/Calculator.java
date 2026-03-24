@@ -9,7 +9,7 @@ public class Calculator {
 
     // 속성
     private Map<String, Task> taskMap;
-    private TaskResult taskResult = new TaskResult("guide");;
+    private TaskResult taskResult = new TaskResult(TaskCommandType.GUIDE.getTaskResult());;
 
     // 생성자
     public Calculator(Map<String, Task> taskMap) {

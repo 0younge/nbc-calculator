@@ -1,12 +1,19 @@
 package oop.v5.task;
 
 public enum TaskCommandType {
-    GUIDE("guide")
+    GUIDE("guide"),
+    INPUT("input"),
+    RESULT("result"),
+    EXIT("exit");
 
-    TaskCommandType(String taskResult, Task task) {
-        this.
+    private final String taskResult;
+
+    TaskCommandType(String taskResult) {
+        this.taskResult = taskResult;
     }
 
-
+    public String getTaskResult() {
+        return taskResult;
+    }
 }
 

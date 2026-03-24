@@ -21,13 +21,13 @@ public class InputStore implements Task{
 
         String input = ioHandler.scanInput();
         if (input.equals("=")) {
-            return new TaskResult("result");
+            return new TaskResult(TaskCommandType.RESULT.getTaskResult());
         }
         else if (input.equals("exit")) {
-            return new TaskResult("exit");
+            return new TaskResult(TaskCommandType.EXIT.getTaskResult());
         } else {
             repository.addList(input);
-            return new TaskResult("input");
+            return new TaskResult(TaskCommandType.INPUT.getTaskResult());
         }
 
     }

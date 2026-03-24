@@ -7,6 +7,6 @@ public class InputGuide implements Task{
         System.out.println("ex) 1 enter + enter + 3 enter = enter");
         System.out.println("exit 입력시 종료");
         System.out.print("입력: ");
-        return new TaskResult("input");
+        return new TaskResult(TaskCommandType.INPUT.getTaskResult());
     }
 }
